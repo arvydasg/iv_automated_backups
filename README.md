@@ -1,7 +1,10 @@
-# little bit about the project
+# Preparation
 
 python3 -m venv env - create virtual environment to store libraries
+
 pip install selenium - install this library
+
+# little bit about the project
 
 Since I don't trust/understand automated backups of websites and I would rather backup things myself, know where they are stored and what is actually "backuped",
 I create backups for my client sites manually. The procedure is:
@@ -63,3 +66,4 @@ Any deprecation errors were fixed by this - https://stackoverflow.com/questions/
 # Known bugs
 
 * Doesn't close browser windows after each script runs (not a biggie, everything still works, might fix later)
+
