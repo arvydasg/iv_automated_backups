@@ -1,5 +1,8 @@
 # little bit about the project
 
+python3 -m venv env - create virtual environment to store libraries
+pip install selenium - install this library
+
 Since I don't trust/understand automated backups of websites and I would rather backup things myself, know where they are stored and what is actually "backuped",
 I create backups for my client sites manually. The procedure is:
 
