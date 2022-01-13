@@ -44,8 +44,8 @@ def iv_login():
     print("logged_in")
 
 def do_backup():
-    # pytting some sleep, otherwise script runs faster than the browser and it crashes
-    driver.find_element(By.XPATH,'/html/body/table[2]/tbody/tr/td/table/tbody/tr[5]/td/ul[1]/li[2]/a').click()
+    # putting some sleep, otherwise script runs faster than the browser and it crashes
+    driver.find_element(By.XPATH,'/html/body/table[2]/tbody/tr/td/table/tbody/tr[3]/td/ul[1]/li[2]/a').click()
     time.sleep(1)
     driver.find_element(By.LINK_TEXT, "DirectAdmin").click()
     time.sleep(1)
