@@ -4,12 +4,15 @@ from configparser import ConfigParser
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome("/home/arvydas/Desktop/chromedriver")
+
+driver = webdriver.Chrome("/home/arvydas/Dropbox/src/iv_automated_backups/chromedriver")
 driver.maximize_window()
+
 
 def main():
     iv_login()
     do_backup()
+
 
 def read_user():
     file = '/home/arvydas/Desktop/config.ini'
@@ -17,11 +20,13 @@ def read_user():
     config.read(file)
     return(config['jc']['user'])
 
+
 def read_pass():
     file = '/home/arvydas/Desktop/config.ini'
     config = ConfigParser()
     config.read(file)
     return(config['jc']['pass'])
+
 
 def read_ivlt():
     file = '/home/arvydas/Desktop/config.ini'
@@ -29,11 +34,20 @@ def read_ivlt():
     config.read(file)
     return(config['jc']['ivlt'])
 
+
 def read_backup_page():
     file = '/home/arvydas/Desktop/config.ini'
     config = ConfigParser()
     config.read(file)
     return(config['jc']['backup_page'])
+
+
+def talpinimas():
+    file = '/home/arvydas/Desktop/config.ini'
+    config = ConfigParser()
+    config.read(file)
+    return(config['jc']['talpinimas'])
+
 
 def iv_login():
     browser = driver.get(read_ivlt())
@@ -43,9 +57,9 @@ def iv_login():
     driver.find_element_by_css_selector("input[type=\"submit\" i]").click()
     print("logged_in")
 
+
 def do_backup():
-    # putting some sleep, otherwise script runs faster than the browser and it crashes
-    driver.find_element(By.XPATH,'/html/body/table[2]/tbody/tr/td/table/tbody/tr[3]/td/ul[1]/li[2]/a').click()
+    browser = driver.get(talpinimas())
     time.sleep(1)
     driver.find_element(By.LINK_TEXT, "DirectAdmin").click()
     time.sleep(1)
@@ -56,5 +70,3 @@ def do_backup():
 
 if __name__ == '__main__':
 	main()
-
-        
