@@ -1,0 +1,22 @@
+# input proper login and link details here, they will later be used in the script
+
+[od]
+user = od
+pass = xxxxxxx
+ivlt = https://klientams.iv.lt/?command=signin
+talpinimas = https://klientams.iv.lt/hosting.php?id=xxxxxxx
+backup_page = https://bla.lt:xxxxxx/CMD_SITE_BACKUP?domain=xxxxxxx.lt
+
+[jc]
+user = jc
+pass = xxxxxxx
+ivlt = https://klientams.iv.lt/?command=signin
+talpinimas = https://klientams.iv.lt/hosting.php?id=xxxxxxx
+backup_page = https://bla.lt:xxxxxx/CMD_SITE_BACKUP?domain=xxxxxxx.lt
+
+[sf]
+user = sf
+pass = xxxxxxx
+ivlt = https://klientams.iv.lt/?command=signin
+talpinimas = https://klientams.iv.lt/hosting.php?id=xxxxxxx
+backup_page = https://bla.lt:xxxxxx/CMD_SITE_BACKUP?domain=xxxxxxx.lt
